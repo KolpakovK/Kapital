@@ -1,0 +1,560 @@
+.space48{
+    height: 48px;
+}
+
+.space96{
+    height: 96px;
+}
+
+.width-100{
+    width: 100%;
+}
+
+.decoration-none{
+    text-decoration: none;
+}
+
+.text-bold{
+    font-weight: bold;
+}
+
+.text-medium{
+    font-weight: 500;
+}
+
+.text-regular{
+    font-weight: normal;
+}
+
+.text-light{
+    font-weight: 300;
+}
+
+.text-white{
+    color:white;
+}
+
+.text-lightgrey{
+    color: #FFFFFF;
+    opacity: 0.7;
+}
+
+
+.button{
+    padding: 20px 24px;
+    background: radial-gradient(115.63% 1279.45% at 103.5% -6.45%, #2B3F3F 0%, rgba(43, 63, 63, 0) 100%), #23232E;
+    border-radius: 32px;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    transform: scale(1);
+    transition: all 500ms cubic-bezier(.22,.55,.61,.89);
+}
+
+.button:hover{
+    transform: scale(1.025);
+}
+
+.button-blocked{
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.opacity7{
+    opacity: 0.7;
+}
+
+.margin-bottom-24{
+    margin-bottom: 24px;
+}
+
+/* input */
+
+.input-field{
+    position: relative;
+    width: 100%;
+}
+
+.input-field label{
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translate(0px,-50%);
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    color: #FFFFFF;
+    transition: top 500ms cubic-bezier(.22,.55,.61,.89), font-size 500ms cubic-bezier(.22,.55,.61,.89), opacity 500ms cubic-bezier(.22,.55,.61,.89), transform 500ms cubic-bezier(.22,.55,.61,.89);
+}
+
+.input-field .list-arrow{
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translate(0px,-50%);
+    transition: transform 500ms cubic-bezier(.22,.55,.61,.89), opacity 500ms cubic-bezier(.22,.55,.61,.89);
+    opacity: 0.5;
+}
+
+.input-field input{
+    box-sizing: border-box;
+    padding: 22px 24px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ffffff19;
+    background: none;
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    color: #FFFFFF;
+    transition: padding 500ms cubic-bezier(.22,.55,.61,.89), border-color 500ms cubic-bezier(.22,.55,.61,.89);
+}
+
+.input-field input:valid{
+    border-color: #3f8a8a;
+}
+
+.input-field input:hover{
+    border-color: #ffffff50;
+}
+
+.input-field input:valid:hover{
+    border-color: #39c9c9;
+}
+
+.input-field input:focus{
+    border-color: #ffffff;
+}
+
+
+.input-field input:focus ~ label, .input-field input:valid ~ label{
+    font-size: 14px;
+    opacity: 0.5;
+    top: 13px;
+    transform: translate(0px,0px);
+}
+
+.input-field input:focus ~ .list-arrow{
+    transform: translate(0px,-50%) rotate(180deg);
+    opacity: 1;
+}
+
+.input-field input:focus, .input-field input:valid{
+    padding-top: 31px;
+    padding-bottom: 13px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+input::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+/* checkboxes */
+
+.input-checkbox{
+    position: relative;
+    box-sizing: border-box;
+    padding: 22px 24px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ffffff19;
+    background: none;
+    transition: border-color 500ms cubic-bezier(.22,.55,.61,.89);
+}
+
+.input-checkbox label, .input-checkbox p{ 
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    color: #FFFFFF;
+}
+
+.input-checkbox p{
+    margin-bottom: 44px;
+}
+
+.input-checkbox.checked{
+    border-color: #3f8a8a;
+}
+
+.input-checkbox:hover{
+    border-color: #ffffff50;
+}
+
+.input-checkbox.checked:hover{
+    border-color: #39c9c9;
+}
+
+.input-checkbox hr{
+    position: absolute;
+    top: 60px;
+    left: 1px;
+    width: calc(100% - 2px);
+    border-color: #ffffff19;
+}
+
+.input-checkbox input{
+    position: absolute;
+    z-index: 4;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+}
+
+.input-checkbox label::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #ffffff19;
+    border-radius: 5px;
+    margin-right: 8px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+.input-checkbox label{
+    display: inline-flex;
+    align-items: center;
+    opacity: 0.5;
+}
+
+.input-checkbox label:hover{
+    display: inline-flex;
+    align-items: center;
+    opacity: 0.75;
+}
+
+.input-checkbox .checkboxes{
+    display: flex;
+    flex-direction: column;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
+.input-checkbox .checkboxes .checkbox{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.input-checkbox input:not(:checked)+label:hover::before {
+    border-color: #ffffff50;
+}
+.input-checkbox input:hover+label:hover::before {
+    border-color: #ffffff50;
+}
+
+.input-checkbox input:checked+label::before {
+    border-color: #3f8a8a;
+    background-color: #3f8a8a;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.input-checkbox input:checked+label {
+    opacity: 1;
+}
+
+
+/*--------mobile */
+@media only screen  and (min-width: 320px) {
+    h2{
+        font-family: IBM Plex Sans;
+        font-size: 24px;
+        line-height: 100%;
+    }
+
+    h1{
+        font-size: 24px;
+        font-family: IBM Plex Sans;
+        line-height: 120%;
+    }
+
+    p,a,input,.input-checkbox label{
+        font-family: IBM Plex Sans;
+        font-size: 16px !important;
+        line-height: 155%;
+    }
+
+    .input-field label{
+        font-size: 16px;
+    }
+    .input-field input:focus ~ label, .input-field input:valid ~ label{
+        font-size: 10px;
+    }
+}
+
+/*--------tablet */
+@media only screen  and (min-width: 740px) {
+    h2{
+        font-family: IBM Plex Sans;
+        font-size: 24px;
+        line-height: 100%;
+    }
+
+    h1{
+        font-size: 24px;
+        font-family: IBM Plex Sans;
+        line-height: 120%;
+    }
+
+    p,a,input,.input-checkbox label{
+        font-family: IBM Plex Sans;
+        font-size: 16px !important;
+        line-height: 155%;
+    }
+
+    .input-field label{
+        font-size: 16px;
+    }
+
+    .input-field input:focus ~ label, .input-field input:valid ~ label{
+        font-size: 12px;
+    }
+}
+
+/*--------small desktop */
+@media only screen  and (min-width: 1300px) {
+    h2{
+        font-family: IBM Plex Sans;
+        font-size: 24px;
+        line-height: 100%;
+    }
+
+    h1{
+        font-size: 32px;
+        font-family: IBM Plex Sans;
+        line-height: 120%;
+    }
+
+    p,a,input,.input-checkbox label{
+        font-family: IBM Plex Sans;
+        font-size: 20px !important; 
+        line-height: 155%;
+    }
+
+    .input-field label{
+        font-size: 20px;
+    }
+
+    .input-field input:focus ~ label, .input-field input:valid ~ label{
+        font-size: 14px;
+    }
+}
+
+.list{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    max-height: 300px;
+    overflow-y: scroll;
+    width: 100%;
+    top: calc(100% + 8px);
+    box-sizing: border-box;
+    background: #11111112;
+    backdrop-filter: blur(16px);
+    border-radius: 16px;
+    opacity: 1;
+    z-index: 1;
+    height: 0px;
+    padding: 0px 16px;
+    border: none;
+    transition: all 0.3s;
+}
+
+input:focus ~ .list{
+    border:1px solid #ffffff19;
+    padding: 16px;
+    height: 300px;
+}
+
+
+.list span{
+    color: white;
+    padding:12px 0px;
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 100%;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+.list span:hover{
+    opacity: 1;
+}
+
+
+#app {
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin: 0 auto;
+    min-height: 100vh;
+  }
+
+  #total{
+    width: 100%;
+    padding: 48px;
+    background: #22222C;
+    border-radius: 32px;
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    color: white;
+    box-sizing: border-box;
+  }
+
+  body{
+    background: url('./assets/noiseBack.png'), #202023;
+  }
+
+  body::after{
+    content:"";
+    left: calc(50% + 159px);
+    top: 0px;
+    position: fixed;
+    z-index:-4;
+    height: 100vh;
+    width: 100vw;
+    background: #161616;
+  }
+
+  .container{
+    display: flex;
+    justify-content: space-between;
+  }
+  #leftCol{
+    width:695px;
+  }
+
+  #rightCol{
+    width: 377px;
+  }
+
+  .field-grid{
+    width: 100%;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto auto; 
+    gap: 16px 25px; 
+    grid-template-areas: 
+      ". ."
+      ". ."
+      ". ."; 
+  }
+
+  /*--------mobile */
+  @media only screen  and (min-width: 320px) {
+    #app{
+      width: 95%;
+    }
+
+    body::after{
+      width: 0px;
+    }
+    .container{
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    #leftCol{
+      width: 100%;
+    }
+
+    #rightCol{
+      padding-top: 64px;
+      padding-bottom: 32px;
+      width: 100%;
+    }
+
+    .field-grid{
+      width: 100%;
+      display: grid; 
+      grid-template-columns: 1fr; 
+      grid-template-rows: auto auto auto auto auto auto; 
+      gap: 16px 25px; 
+      grid-template-areas: 
+        "."
+        "."
+        "."
+        "."
+        "."
+        "."; 
+    }
+  }
+
+  /*--------tablet */
+  @media only screen  and (min-width: 740px) {
+    #app{
+      width: 704px;
+    }
+
+    body::after{
+      width: 0px;
+    }
+    .container{
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    #leftCol{
+      width: 100%;
+    }
+
+    #rightCol{
+      padding-top: 64px;
+      padding-bottom: 32px;
+      width: 100%;
+    }
+
+    .field-grid{
+      width: 100%;
+      display: grid; 
+      grid-template-columns: 1fr 1fr; 
+      grid-template-rows: auto auto auto; 
+      gap: 16px 25px; 
+      grid-template-areas: 
+        ". ."
+        ". ."
+        ". ."; 
+    }
+  }
+
+  /*-------- desktop */
+  @media only screen  and (min-width: 1300px) {
+    #app{
+      width: 1200px;
+    }
+
+    body::after{
+      left: calc(50% + 159px);
+      width: 100vw;
+    }
+
+    .container{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    #leftCol{
+      width:695px;
+    }
+
+    #rightCol{
+      padding: 0;
+      width: 377px;
+    }
+  }
