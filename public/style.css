@@ -235,8 +235,8 @@ input::-webkit-calendar-picker-indicator {
 .input-checkbox input{
     position: absolute;
     z-index: 4;
-    width: 20px;
-    height: 20px;
+    width: 100%;
+    height: 100%;
     opacity: 0;
 }
 
